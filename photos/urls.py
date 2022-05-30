@@ -7,7 +7,7 @@ from . import views
 urlpatterns=[
     re_path('',views.home,name ='images'),
     re_path(r'^search/', views.search_results, name='search_results'),
-    re_path(r'^image/<id>',views.image,name='image')
+    re_path(r'^image/',views.image,name='image')
 ]
-if settings.DEBUG:
+if settings.DEBUG is True:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
