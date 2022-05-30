@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% if title %}
+  <title>Photo Galleria - {{title}}</title>
+  {% else %}
+    <title> Photo Galleria</title>
+  {% endif %}
+
+  {% block styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/photo.css' %}">
+  {% endblock %}
+
+</head>
+<body>
+    {% include "navbar.html" %}
+    {% block content %} {%endblock%}
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
+</body>
+</html>

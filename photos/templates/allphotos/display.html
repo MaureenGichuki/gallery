@@ -1,0 +1,30 @@
+{%extends 'allphotos/base.html'%}
+{% block content %} 
+{% load bootstrap4 %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/photo.css' %}">
+
+{{ block.super}}
+
+
+<div class="container">
+
+  <!-- Looping through images   -->
+  {% for image in image %}
+
+  <div class="row">
+    <!-- displaying Photos -->
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <img src="{{image.image_image.url}}" class="img-responsive" alt="Image" id="imgs">
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <h2 class="text-center"> {{ image.name }} </h2>
+      <p class="text-center">Description: {{ image.description }} </p>
+      <p class="text-center">Location: {{ image.location}} </p>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+ {% endblock %}
