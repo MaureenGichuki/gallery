@@ -1,4 +1,4 @@
-# gallery
+# Galleria
 ## Author
 Maureen Gichuki
 
