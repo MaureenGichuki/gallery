@@ -34,7 +34,7 @@ class Location(models.Model):
 class Image(models.Model):
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     location = models.ForeignKey(Location,on_delete=models.CASCADE)
-    image_image = models.ImageField(upload_to = 'images/')
+    image= models.ImageField(upload_to = 'images/')
     name = models.CharField(max_length =60)
     description = models.TextField()
 
