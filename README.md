@@ -27,6 +27,11 @@ This django app allows a user to upload photos based on category and location an
 
 ## Technologies Used
 * python3.8
+* Bootstrap4
+* Html
+* Css
+* Django
+* Postgres
 
 ## Contact Information
 You can reach me at[maureenwaruguru@gmail.com]
