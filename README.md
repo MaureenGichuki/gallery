@@ -36,7 +36,7 @@ This django app allows a user to upload photos based on category and location an
 ## Contact Information
 You can reach me at[maureenwaruguru@gmail.com]
 
-![ Galleria ](images/screenshot.png)
+![ Galleria ](screenshot.png)
 
 
 ## You can view the site here
