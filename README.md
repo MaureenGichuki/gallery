@@ -40,4 +40,4 @@ You can reach me at[maureenwaruguru@gmail.com]
 
 
 ## You can view the site here
-Galleria []
+Galleria [https://mimogalleria.herokuapp.com/]
