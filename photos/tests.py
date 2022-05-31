@@ -13,7 +13,7 @@ class ImageTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.pizza,Image))
 
-        # Testing Save Method
+        # Testing Save Method Image 
     def test_save_method(self):
         self.pizza.save_image()
         images = Image.objects.all()
