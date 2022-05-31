@@ -1,30 +1,45 @@
 {%extends 'allphotos/base.html'%}
-{% block content %} 
 {% load bootstrap4 %}
-
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/photo.css' %}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+{% block content %} 
 {{ block.super}}
 
-<div class="container">
-<div class="card">
-  <!-- Looping through images   -->
-  {% for image in image %}
+<div class="container" id="cont">
 
-  <div class="row">
-    <!-- displaying Photos -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{image.image.url}}" class="img-responsive" alt="Image" id="imgs">
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2 class="text-center"> {{ image.name }} </h2>
-      <p class="text-center">Description: {{ image.description }} </p>
-      <p class="text-center">Location: {{ image.location}} </p>
-    </div>
+  <!-- Looping through news   -->
+  {% for image in images %}
+
+  <div class="card" id="card1">    
+     <!--Display news images  -->
+     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="imgs">
+        <img src="{{image.image_path.url}}" class="img-fluid" alt="Image" >
+      </div>
+      <br>
+      <div class="card" id="bts">
+        <a class="btn btn-primary" href="{% url 'image' %}" role="button" id="bts">View Details</a>
+      </div>   
   </div>
-  {% endfor %}
 
+  {% empty %}
+  <div class="row">
+    <h2 class="text-center">There are No Images</h2>
+  </div>
 </div>
-</div>
+
+<script>
+  function link(value) {
+      function photo_link(event){
+          event.clipboardData.setData('text/plain', value);
+          event.preventDefault();
+          document.removeEventListener('copy', photo_link, true);
+      }
+      document.addEventListener('copy', photo_link, true);
+      document.execCommand('copy');
+  }
+  </script>
+{% endfor %}
 
  {% endblock %}

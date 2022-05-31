@@ -1,0 +1,27 @@
+*{
+    /* padding: 100px; */
+    background-attachment: fixed;
+    background-image: url("https://images.pexels.com/photos/5966595/pexels-photo-5966595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+#card1{
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    background: white;
+
+}
+li{
+    list-style: none;
+}
+#bts{
+    background: white;
+    margin: auto;
+    color: black;
+}
+a{
+    color: white;
+}
