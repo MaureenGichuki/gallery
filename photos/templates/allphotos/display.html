@@ -7,21 +7,43 @@
 {% block content %} 
 {{ block.super}}
 
-<div class="container" id="cont">
 
-  <!-- Looping through news   -->
+  <!-- Looping through images  -->
   {% for image in images %}
 
   <div class="card" id="card1">    
-     <!--Display news images  -->
-     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="imgs">
-        <img src="{{image.image_path.url}}" class="img-fluid" alt="Image" >
-      </div>
-      <br>
+        <!--Display news images  -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="imgs">
+            <img src="{{image.image_path.url}}" class="img-fluid" alt="Image" >
+          </div>
       <div class="card" id="bts">
-        <a class="btn btn-primary" href="{% url 'image' %}" role="button" id="bts">View Details</a>
-      </div>   
+          <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> View Details
+        </button>
+      <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" id="show">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{image.name}}</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="{{image.image_path.url}}" class="img-fluid" alt="Image" >
+                  <p>{{image.description}}</p>
+                  <p>{{image.location}}</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
   </div>
+</div>
 
   {% empty %}
   <div class="row">

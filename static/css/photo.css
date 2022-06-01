@@ -8,11 +8,13 @@
     border-width: thin;
     border-radius: 20px;
     padding: 50px;
-    margin: 20px;
+    margin: 70px;
     display: flex;
     flex-direction: row;
     background: white;
-
+}
+#show{
+    color: white;
 }
 li{
     list-style: none;
