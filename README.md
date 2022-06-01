@@ -3,7 +3,7 @@
 Maureen Gichuki
 
 ## Description
-This django app managed through an admin dashboard, allows a user to view photos based on category and location, search photos, copy photos and respective image addresses. 
+This is a django app managed through an admin dashboard, that allows a user to view photos based on category and location, search photos, copy photos and the respective image addresses. 
 ## User Stories
 
 ### Brief Description of the behaviours that have been implemented in the gallery application 
