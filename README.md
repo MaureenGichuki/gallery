@@ -3,8 +3,7 @@
 Maureen Gichuki
 
 ## Description
-This django app allows a user to upload photos based on category and location and also filter out the view based on the two.
-
+This django app managed through an admin dashboard, allows a user to view photos based on category and location, search photos, copy photos and respective image addresses. 
 ## User Stories
 
 ### Brief Description of the behaviours that have been implemented in the gallery application 
